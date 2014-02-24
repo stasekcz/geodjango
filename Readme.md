@@ -55,7 +55,6 @@ $ git push heroku master
 
 All libraries are stored in the directory `/app/.geodjango`.
 
-## Contact
+## Thanks
 
-[Pierre Dulac](http://github.com/dulaccc)  
-[@dulaccc](https://twitter.com/dulaccc)
+[Pierre Dulac](http://github.com/dulaccc)
