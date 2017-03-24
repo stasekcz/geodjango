@@ -534,7 +534,7 @@ class ScriptHeaderTests(TestCase):
     def test_get_script_header(self):
         if not sys.platform.startswith('java') or not is_sh(sys.executable):
             # This test is for non-Jython platforms
-            self.assertEqual(get_script_header('#!/usr/local/python'),
+            self.assertEqual(get_script_header('#!/home/stasekcz/Desktop/python/menulingo-1213/menulingo_env/bin/python'),
                              '#!%s\n' % os.path.normpath(sys.executable))
             self.assertEqual(get_script_header('#!/usr/bin/python -x'),
                              '#!%s  -x\n' % os.path.normpath(sys.executable))
@@ -563,7 +563,7 @@ class ScriptHeaderTests(TestCase):
             # A mock sys.executable that uses a shebang line (this file)
             exe = os.path.normpath(os.path.splitext(__file__)[0] + '.py')
             self.assertEqual(
-                get_script_header('#!/usr/local/python', executable=exe),
+                get_script_header('#!/home/stasekcz/Desktop/python/menulingo-1213/menulingo_env/bin/python', executable=exe),
                 '#!/usr/bin/env %s\n' % exe)
 
             # Ensure we generate what is basically a broken shebang line
